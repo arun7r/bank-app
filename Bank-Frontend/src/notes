@@ -1,0 +1,101 @@
+                                            ANGULAR
+
+
+BAsic Building Blocks
+
+1) Module - To import third party modules(root module)
+2) Components - To create html,css and ts file
+
+Basic Commands
+
+1)ng new project_name - To create a new project_name
+2)ng g c Component_name - to create a new component
+3)ng serve --open - To run Angular file
+
+
+Basic Concepts
+
+1)Data Binding
+
+Share data between components
+
+ts ---> component
+html ---> view
+
+    a)One way data binding (1 direction)
+
+        ts->html   or   html->ts
+
+      a.1)Component to view
+
+          i)String interpolation (1 direction) - {{expression}}
+          ii)Property Binding - [attribute name]="property" 
+
+      a.2)view to component  
+
+          i)Event binding (1 direction) - (event_name)="function_name()";
+          ii)event binding using $event (event_name)="function_name($event)"
+
+    b)Two way data binding (Two - direction) - ts->html, html-> ts
+      
+      i)ngModel - formsModule in app.module.ts
+       - [(ngModel)]="property_name"
+
+2)Angular Routing
+
+To set path or a component
+
+{
+    path:"value",component:class_name
+}
+
+eg:
+login
+{
+    path:'',component:LoginComponent
+},
+
+3) Dependency Injection
+
+To Share data between two dependend classes
+
+eg:Router class - navigateByaURL is used to navigate the component
+
+4) Angular Services
+
+To hold redundant data
+
+ng g s service_name
+
+5)Angular Directives - To manipulate DOM
+
+    a)Component Directives(array)
+    b)Structural Directives(table)
+        1)*ngFor
+        2)*ngIf
+        
+6)Angular Forms
+    a)Template Driven(first design html page and can't do validation)
+    b)Model Driven Forms(First design model in ts file, Easy validation methods)
+        -Advanced validation
+        1)Reactive Forms
+          form group,array,control
+          we can directly add validations via importing Reactive Form Module
+
+7)Local Storage
+    > setItem - to store data
+    > getItem - to retrieve data
+    > removeItem - to remove data
+
+8)Parent child communication
+
+    parent -> child @input
+    child -> parent @output
+
+eg:
+    Dashboard -> Parent
+    delete -> Child   
+
+9)Angular pipes
+
+{{ value_expression | date [ : format [ : timezone [ : locale ] ] ] }} 

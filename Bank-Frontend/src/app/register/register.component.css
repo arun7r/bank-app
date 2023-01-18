@@ -1,0 +1,14 @@
+body{
+    background-color: grey;
+}
+.signup{
+    text-align: center;
+    box-shadow: 10px 10px 10px;
+}
+.bank_logo{
+    width: 100px; 
+    height: 100px; 
+    border: 3px solid grey; 
+    border-radius: 50px; 
+    background-color: black;
+}

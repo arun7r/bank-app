@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4 mt-4 bg-light signup" style="border-radius: 20px; height: 650px;">
+            <img src="../../assets/images/bank_img.png" class="mt-4 bank_logo" alt="bank image">
+            <h2 class="mt-3 mb-2">My Bank</h2>
+            <h6 style="margin-top: 0px; margin-bottom: 20px; color:dodgerblue">{{aim}}</h6>
+            <form [formGroup]="registerForm">
+                <input formControlName="uname" type="text" placeholder="Username" name="uname" id="reg_uname" size="45" style="height: 50px; border-radius: 20px" class="mb-4">
+
+                <div *ngIf="this.registerForm.get('uname')?.errors && this.registerForm.get('uname')?.touched" style="color: red;">Invalid User Details</div>
+
+                <input formControlName="acno" type="text" placeholder="Account Number" name="acno" id="reg_acno" size="45" style="height: 50px; border-radius: 20px" class="mb-4">
+
+                <div *ngIf="this.registerForm.get('acno')?.errors && this.registerForm.get('acno')?.touched" style="color: red;">Invalid Account Number</div>
+
+                <input formControlName="pswd" type="password" placeholder="Password" name="pswd" id="reg_pswd" size="45" style="height: 50px; border-radius: 20px" class="mb-4"><br>
+
+                <div *ngIf="this.registerForm.get('pswd')?.errors && this.registerForm.get('pswd')?.touched" style="color: red;">Invalid Password</div>
+
+                <button style="width: 360px; border-radius: 20px;" class="btn btn-primary mb-5" (click)="register()">Register</button><br>
+            </form>
+            <a routerLink="">Log in</a>
+        
+    </div>
+    <div class="col-4"></div>
+</div>
